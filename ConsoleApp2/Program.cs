@@ -1,26 +1,41 @@
-﻿using System;
+using System;
 
-namespace Uppgift_2._1
+namespace Program
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hur gammla är du?");
-            int age = int.Parse(Console.ReadLine());
-            if (age <= 16)
+            Console.WriteLine("Välj ett räknessätt. ");
+            Console.WriteLine("1. Addition");
+            Console.WriteLine("2. Subtraktion");
+            Console.WriteLine("3. Multiplikation");
+            Console.WriteLine("4. division");
+
+            int sätt = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Välj talen");
+            int tal1 = int.Parse(Console.ReadLine());
+            int tal2 = int.Parse(Console.ReadLine());
+
+            switch (sätt)
             {
-                Console.WriteLine("Du är för ung");
+                case 1:
+                    Console.WriteLine(tal1 + tal2);
+                    break;
+                case 2:
+                    Console.WriteLine(tal1 - tal2);
+                    break;
+                case 3:
+                    Console.WriteLine(tal1 * tal2);
+                    break;
+                case 4:
+                    Console.WriteLine(tal1 / tal2);
+                    break;
             }
-            else if (age >= 16 & age <= 20)
-            {
-                Console.WriteLine("Du är i rätt åldersgrupp");
-            }
-            else
-            {
-                Console.WriteLine("Du är för gammal");
-            }
-            
+
+
+
         }
     }
 }
